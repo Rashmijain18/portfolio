@@ -10,7 +10,7 @@ export const Introduction = () => {
         <p>
           I’m a software engineer specializing in building (and occasionally
           designing) exceptional digital experiences. Currently, I’m focused on
-          building accessible, human-centered products at Upstatement.
+          building accessible, human-centered products at PwC.
         </p>
       </div>
       <div className="flex text-green gap-8">

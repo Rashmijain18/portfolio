@@ -11,6 +11,22 @@ export const Projects = () => {
       githubLink: "https://github.com/your-username/algolia-wordpress",
       liveDemoLink: "https://your-live-demo-url.com",
     },
+    {
+      title: "Chore Chart",
+      description:
+        "Building a custom multisite compatible WordPress plugin to build global search with Algolia",
+      technologies: ["Algolia", "WordPress", "PHP"],
+      githubLink: "https://github.com/your-username/algolia-wordpress",
+      liveDemoLink: "https://your-live-demo-url.com",
+    },
+    {
+      title: "Chore Chart",
+      description:
+        "Building a custom multisite compatible WordPress plugin to build global search with Algolia",
+      technologies: ["Algolia", "WordPress", "PHP"],
+      githubLink: "https://github.com/your-username/algolia-wordpress",
+      liveDemoLink: "https://your-live-demo-url.com",
+    },
   ];
 
   return (

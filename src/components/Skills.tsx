@@ -21,6 +21,7 @@ export const Skills = () => {
       "Redis",
       "SQL Server",
       "NoSQL",
+      "Docker",
     ],
     aiTools: ["Cursor", "Microsoft Copilot", "ChatPwC"],
     tools: ["Visual Studio", "Postman", "GitHub", "Azure DevOps (ADO)"],
@@ -35,74 +36,34 @@ export const Skills = () => {
     ],
   };
 
+  const formatCategoryName = (category: string) => {
+    if (category === "aiTools") return "AI/ML & GenAI";
+    return (
+      category.charAt(0).toUpperCase() +
+      category.slice(1).replace(/([A-Z])/g, " $1")
+    );
+  };
+
   return (
-    <div className="flex flex-col gap-6 prose prose-invert">
-      <h2 className="text-lightest-slate">Skills</h2>
+    <section className="p-40">
+      <h3 className="text-lightest-slate">Skills</h3>
       <div className="flex flex-col gap-4">
-        <div>
-          <h3 className="text-green">Frontend</h3>
-          <div className="flex flex-col gap-4">
-            <div>
-              <div className="flex flex-wrap gap-2">
-                {skills.frontend.map((tech, index) => (
-                  <span
-                    key={index}
-                    className="text-lightest-slate bg-light-navy px-3 py-1 rounded"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
+        {Object.keys(skills).map((category) => (
+          <div key={category}>
+            <h4 className="!text-green">{formatCategoryName(category)}</h4>
+            <div className="flex flex-wrap gap-2">
+              {skills[category as keyof typeof skills].map((skill, index) => (
+                <span
+                  key={index}
+                  className="text-lightest-slate bg-light-navy px-3 py-1 rounded"
+                >
+                  {skill}
+                </span>
+              ))}
             </div>
           </div>
-        </div>
-
-        <div>
-          <h3 className="text-green">Backend</h3>
-          <div className="flex flex-col gap-4">
-            <div>
-              <div className="flex flex-wrap gap-2">
-                {skills.backend.map((tech, index) => (
-                  <span
-                    key={index}
-                    className="text-lightest-slate bg-light-navy px-3 py-1 rounded"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <h3 className="text-green">AI/ML & GenAI</h3>
-          <div className="flex flex-wrap gap-2">
-            {skills.aiTools.map((tool, index) => (
-              <span
-                key={index}
-                className="text-lightest-slate bg-light-navy px-3 py-1 rounded"
-              >
-                {tool}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        <div>
-          <h3 className="text-green">Additional Skills</h3>
-          <div className="flex flex-wrap gap-2">
-            {skills.additionalSkills.map((skill, index) => (
-              <span
-                key={index}
-                className="text-lightest-slate bg-light-navy px-3 py-1 rounded"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
-        </div>
+        ))}
       </div>
-    </div>
+    </section>
   );
 };

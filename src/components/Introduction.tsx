@@ -1,23 +1,37 @@
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export const Introduction = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <section className="w-full p-6 prose prose-invert flex flex-col items-center justify-center gap-8">
-      <div className="mb-8">
+    <section className="flex flex-col justify-center gap-8 px-40">
+      <div>
         <p className="text-green">Hi, my name is</p>
-        <h1 className="text-lightest-slate">Rashmi Jain.</h1>
+        <h1 className="!text-lightest-slate">Rashmi Jain.</h1>
         <h2>I build things for the web.</h2>
-        <p>
-          I’m a software engineer specializing in building (and occasionally
-          designing) exceptional digital experiences. Currently, I’m focused on
+        <p className="flex w-[40vw]">
+          I'm a software engineer specializing in building (and occasionally
+          designing) exceptional digital experiences. Currently, I'm focused on
           building accessible, human-centered products at PwC.
         </p>
       </div>
-      <div className="flex text-green gap-8">
-        <button className="border border-green rounded-md p-3">
+      <div className="flex text-green gap-4">
+        <a
+          href="/Rashmi_Jain_Resume.pdf"
+          download="Rashmi_Jain_Resume.pdf"
+          className="border border-green rounded-md p-3 hover:bg-green-tint transition-colors cursor-pointer !text-green !no-underline"
+        >
           Download Resume
-        </button>
-        <button className="border border-green rounded-md p-3">
+        </a>
+        <button
+          onClick={scrollToContact}
+          className="border border-green rounded-md p-3 hover:bg-green-tint transition-colors"
+        >
           Contact Me
         </button>
       </div>

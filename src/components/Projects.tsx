@@ -1,91 +1,55 @@
-import { FaGithub } from "react-icons/fa";
-import { FiExternalLink } from "react-icons/fi";
+import { ProjectCard } from "./ProjectCard";
 
 export const Projects = () => {
   const projects = [
     {
       title: "Chore Chart",
       description:
-        "Building a custom multisite compatible WordPress plugin to build global search with Algolia",
-      technologies: ["Algolia", "WordPress", "PHP"],
-      githubLink: "https://github.com/your-username/algolia-wordpress",
+        "A collaborative chore chart app built with Cursor, designed to help parents and kids manage daily tasks and rewards together. Focused on clean UI and seamless interaction to promote habit-building and accountability.",
+      technologies: [
+        "React",
+        "Tailwind CSS",
+        "NodeJs",
+        "Hono.Js",
+        "Drizzle",
+        "PostgreSQL",
+        "Docker",
+        "Cursor",
+      ],
+      githubLink: "https://github.com/jermbo/ChoreChart",
       liveDemoLink: "https://your-live-demo-url.com",
+      image: "/Sudoku.png",
     },
     {
-      title: "Chore Chart",
+      title: "Sudoku",
       description:
-        "Building a custom multisite compatible WordPress plugin to build global search with Algolia",
-      technologies: ["Algolia", "WordPress", "PHP"],
-      githubLink: "https://github.com/your-username/algolia-wordpress",
-      liveDemoLink: "https://your-live-demo-url.com",
+        "A playable Sudoku game built from scratch, letting users solve puzzles interactively in the browser. Includes real-time number validation and intuitive controls for a smooth and engaging logic experience.",
+      technologies: ["React", "CSS"],
+      githubLink: "https://github.com/Rashmijain18/Sudoku/tree/master",
+      liveDemoLink: "https://sudoku-five-neon.vercel.app/",
+      image: "/Sudoku.png",
     },
     {
-      title: "Chore Chart",
-      description:
-        "Building a custom multisite compatible WordPress plugin to build global search with Algolia",
-      technologies: ["Algolia", "WordPress", "PHP"],
-      githubLink: "https://github.com/your-username/algolia-wordpress",
-      liveDemoLink: "https://your-live-demo-url.com",
+      title: "Article on Hoisting",
+      liveDemoLink:
+        "https://medium.com/@rashmijain1861993/understanding-hoisting-in-javascript-245794b1d327",
+      image: "/Hoisting.png",
+    },
+    {
+      title: "Article on Higher Order Functions",
+      liveDemoLink:
+        "https://medium.com/@rashmijain1861993/higher-order-functions-in-javascript-a1874e6ee378",
+      image: "/HOF.png",
     },
   ];
 
   return (
-    <section className="flex flex-col items-center gap-12 p-8">
-      <h2 className="text-lightest-slate">Some Things I've Built</h2>
+    <section className="p-40">
+      <h3 className="text-lightest-slate pb-8">Some Things I've Built</h3>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
         {projects.map((project, index) => (
-          <div
-            key={index}
-            className="rounded-lg shadow-md flex flex-col h-full overflow-hidden"
-          >
-            {
-              <div className="bg-navy p-6 rounded-lg flex flex-col justify-between h-full">
-                <div className="flex justify-between items-center mb-4">
-                  <h3 className="text-white text-xl font-bold mb-2">
-                    {project.title}
-                  </h3>
-                  <div className="flex gap-2">
-                    {project.githubLink && (
-                      <a
-                        href={project.githubLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-light-slate hover:text-green transition-colors"
-                      >
-                        <FaGithub size={20} />
-                      </a>
-                    )}
-                    {project.liveDemoLink && (
-                      <a
-                        href={project.liveDemoLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-light-slate hover:text-green transition-colors"
-                      >
-                        <FiExternalLink size={20} />
-                      </a>
-                    )}
-                  </div>
-                </div>
-                <p className="text-light-slate mb-4 flex-grow">
-                  {project.description}
-                </p>
-                {project.technologies && project.technologies.length > 0 && (
-                  <ul className="flex flex-wrap gap-2 text-sm mt-auto text-light-slate">
-                    {project.technologies.map((tech, techIndex) => (
-                      <li
-                        key={techIndex}
-                        className="bg-light-navy text-light-slate px-3 py-1 rounded-full text-sm"
-                      >
-                        {tech}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            }
-          </div>
+          <ProjectCard key={index} project={project} />
         ))}
       </div>
     </section>

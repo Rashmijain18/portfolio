@@ -15,9 +15,8 @@ export const Introduction = () => {
         <h1 className="!text-lightest-slate">Rashmi Jain.</h1>
         <h2>I build things for the web.</h2>
         <p className="flex w-[40vw]">
-          I'm a software engineer specializing in building (and occasionally
-          designing) exceptional digital experiences. Currently, I'm focused on
-          building accessible, human-centered products at PwC.
+          Bridging code and intelligence—crafting scalable apps with the power
+          of AI and the precision of experience.
         </p>
       </div>
       <div className="flex text-green gap-4">

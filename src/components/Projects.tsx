@@ -18,7 +18,7 @@ export const Projects = () => {
       ],
       githubLink: "https://github.com/jermbo/ChoreChart",
       liveDemoLink: "https://your-live-demo-url.com",
-      image: "/Sudoku.png",
+      image: "/ChoreChart.png",
     },
     {
       title: "Sudoku",

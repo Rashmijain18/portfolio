@@ -30,8 +30,8 @@ export const Skills = () => {
       "Requirements gathering",
       "Design discussions",
       "Stakeholder demo presentations",
-      "Experience in the full project life cycle",
       "Leading Scrum meetings",
+      "Experience in the full project life cycle",
       "Project management using Azure DevOps",
     ],
   };

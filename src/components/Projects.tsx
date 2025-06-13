@@ -1,5 +1,9 @@
 import { ProjectCard } from "./ProjectCard";
 
+// <Responsive></Responsive>
+// <navigation
+//   <astro
+
 export const Projects = () => {
   const projects = [
     {
@@ -47,9 +51,11 @@ export const Projects = () => {
     <section className="p-40">
       <h3 className="text-lightest-slate pb-8">Some Things I've Built</h3>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+      <div className="flex overflow-x-auto gap-8 pb-4 snap-x snap-mandatory [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-track]:bg-navy [&::-webkit-scrollbar-thumb]:bg-lightest-slate [&::-webkit-scrollbar-thumb]:rounded-full">
         {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
+          <div key={index} className="flex-none w-[400px] snap-center">
+            <ProjectCard project={project} />
+          </div>
         ))}
       </div>
     </section>

@@ -3,11 +3,8 @@ import { FaLinkedin } from "react-icons/fa";
 
 export const ContactInformation = () => {
   return (
-    <section
-      id="contact"
-      className="flex flex-col justify-center items-center min-h-[90vh]"
-    >
-      <div className="flex flex-col justify-center items-center min-h-screen">
+    <section id="contact" className="flex flex-col">
+      <div className="flex flex-col justify-center items-center pb-60">
         <h3 className="text-lightest-slate">Let’s Connect ✉️</h3>
         <p className="w-[50vw] text-center">
           I’m currently open to new opportunities where I can create,

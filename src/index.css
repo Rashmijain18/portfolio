@@ -4,7 +4,7 @@
 
 /* Custom styles can be added below */
 .section-container > section {
-  @apply w-full prose prose-invert max-w-none  min-h-screen;
+  @apply w-full prose prose-invert max-w-none flex justify-center ;
 }
 
 body {

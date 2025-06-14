@@ -4,27 +4,36 @@ export const Header = () => {
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = ["about", "skills", "projects", "contact"];
-      const scrollPosition = window.scrollY + 100;
-
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (
-            scrollPosition >= offsetTop &&
-            scrollPosition < offsetTop + offsetHeight
-          ) {
-            setActiveSection(section);
-            break;
-          }
-        }
-      }
+    const observerOptions = {
+      root: null,
+      rootMargin: "-50% 0px",
+      threshold: 0,
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, observerOptions);
+
+    const sections = ["about", "skills", "projects", "contact"];
+    sections.forEach((section) => {
+      const element = document.getElementById(section);
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        const element = document.getElementById(section);
+        if (element) {
+          observer.unobserve(element);
+        }
+      });
+    };
   }, []);
 
   const scrollToSection = (sectionId: string) => {
@@ -36,7 +45,7 @@ export const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-navy/90 backdrop-blur-sm">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="w-[70vw] mx-auto ">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <span className="text-green text-xl font-bold">Rashmi Jain</span>

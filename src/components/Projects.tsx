@@ -1,9 +1,5 @@
 import { ProjectCard } from "./ProjectCard";
 
-// <Responsive></Responsive>
-// <navigation
-//   <astro
-
 export const Projects = () => {
   const projects = [
     {

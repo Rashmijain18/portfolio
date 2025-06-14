@@ -9,7 +9,7 @@ export const Introduction = () => {
   };
 
   return (
-    <section className="flex flex-col justify-center gap-8 px-40">
+    <section className="flex flex-col gap-8">
       <div>
         <p className="text-green">Hi, my name is</p>
         <h1 className="!text-lightest-slate">Rashmi Jain.</h1>

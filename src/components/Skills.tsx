@@ -45,7 +45,7 @@ export const Skills = () => {
   };
 
   return (
-    <section className="p-40" id="skills">
+    <section className="flex flex-col" id="skills">
       <h3 className="text-lightest-slate">Tech Toolbox 🧰</h3>
       <div className="flex flex-col gap-4">
         {Object.keys(skills).map((category) => (

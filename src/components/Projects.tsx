@@ -44,7 +44,7 @@ export const Projects = () => {
   ];
 
   return (
-    <section className="p-40" id="projects">
+    <section className="flex flex-col pt-40" id="projects">
       <h3 className="text-lightest-slate pb-8">Some Things I've Built 💻 </h3>
 
       <div className="flex overflow-x-auto gap-8 pb-4 snap-x snap-mandatory [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-track]:bg-navy [&::-webkit-scrollbar-thumb]:bg-lightest-slate [&::-webkit-scrollbar-thumb]:rounded-full">

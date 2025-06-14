@@ -8,8 +8,13 @@ export const ContactInformation = () => {
       className="flex flex-col justify-center items-center min-h-[90vh]"
     >
       <div className="flex flex-col justify-center items-center min-h-screen">
-        <h3 className="text-lightest-slate">Get In Touch</h3>
-        <h3 className="text-green">Contact Me</h3>
+        <h3 className="text-lightest-slate">Let’s Connect ✉️</h3>
+        <p className="w-[50vw] text-center">
+          I’m currently open to new opportunities where I can create,
+          collaborate, and grow. Whether you’re hiring, have a project in mind,
+          or just want to chat tech — feel free to reach out. My inbox is always
+          open, and I’d love to hear from you!
+        </p>
         <div className="flex gap-4">
           <a
             href="mailto:rashmi.jain24@outlook.com"

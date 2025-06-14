@@ -1,54 +1,110 @@
-# React + TypeScript + Vite
+# Rashmi Jain's Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built with React and Tailwind CSS to showcase my work, skills, and experience.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Modern Design**: Clean and professional design with a dark theme
+- **Responsive Layout**: Fully responsive design that works on all devices
+- **Smooth Navigation**:
+  - Fixed header with smooth scrolling to sections
+  - Active section highlighting
+  - Intersection Observer for accurate scroll detection
+- **Project Showcase**:
+  - Horizontal scrollable project cards
+  - Custom scrollbar styling
+  - Project details with technologies used
+- **Contact Section**: Easy access to email and LinkedIn
+- **Skills Display**: Visual representation of technical skills
+- **About Section**: Personal introduction and background
+- **Custom Styling**:
+  - Custom color scheme
+  - Modern typography
+  - Smooth transitions and hover effects
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend Framework**: React
+- **Styling**: Tailwind CSS
+- **Icons**: React Icons
+- **Deployment**: Vercel
+- **Version Control**: Git
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📦 Project Structure
+
+```
+src/
+├── components/
+│   ├── About.tsx
+│   ├── ContactInformation.tsx
+│   ├── Header.tsx
+│   ├── Home.tsx
+│   ├── Introduction.tsx
+│   ├── ProjectCard.tsx
+│   ├── Projects.tsx
+│   └── Skills.tsx
+├── App.tsx
+└── main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🎨 Design Features
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Color Scheme**:
+  - Dark navy background
+  - Green accents
+  - Light slate text
+  - Custom scrollbar styling
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 🚀 Getting Started
+
+1. Clone the repository:
+
+   ```bash
+   git clone [repository-url]
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Build for production:
+   ```bash
+   npm run build
+   ```
+
+## 📱 Responsive Design
+
+- Mobile-first approach
+- Breakpoints for different screen sizes
+- Optimized layout for all devices
+- Horizontal scroll for project cards on mobile
+
+## 🔧 Customization
+
+To customize the portfolio:
+
+1. Update personal information in respective components
+2. Modify color scheme in Tailwind config
+3. Add/remove projects in Projects component
+4. Update skills in Skills component
+5. Modify contact information in ContactInformation component
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+## 👩‍💻 Author
+
+Rashmi Jain
+
+- Email: rashmi.jain24@outlook.com
+- LinkedIn: [Rashmi Jain](https://www.linkedin.com/in/hirerashmi/)
+- GitHub: [Rashmijain18](https://github.com/Rashmijain18)

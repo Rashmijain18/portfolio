@@ -1,8 +1,8 @@
 export const About = () => {
   return (
-    <section className="flex justify-center items-center">
+    <section className="flex justify-center items-center" id="about">
       <div className="max-w-[50vw] ">
-        <h3 className="text-lightest-slate flex-start">About Me</h3>
+        <h3 className="text-lightest-slate flex-start">About Me 👩‍💻 </h3>
         <div className="flex flex-row gap-20">
           <div>
             <p>

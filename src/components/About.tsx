@@ -19,14 +19,20 @@ export const About = () => {
               prompt engineering training for over 50 employees at PwC
             </b>
             , helping teams better utilize AI in their day-to-day work.
-            Currently, I'm actively exploring other cutting-edge tools such as{" "}
-            <b>Replit, Codeium,</b> and more to stay at the forefront of
-            AI-enhanced development.
+          </p>
+          <p>
+            Currently, I'm building more personal projects using AI tools and
+            experimenting with prompt strategies to understand what works
+            best—refining my approach to faster, smarter website development
+            with AI. I'm also actively exploring cutting-edge platforms such as
+            Replit, Codeium, and more to stay at the forefront of AI-enhanced
+            development.
           </p>
           <p>
             I thrive in Agile, collaborative environments that value clean code,
             open communication, and continuous improvement. I enjoy
             <b className="text-lightest-slate">
+              {" "}
               leading teams, mentoring junior developers, conducting code
               reviews, and tackling complex feature development
             </b>{" "}

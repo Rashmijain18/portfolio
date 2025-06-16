@@ -3,7 +3,14 @@ export const About = () => {
     <section className="flex flex-col" id="about">
       <h3 className="text-lightest-slate flex-start">About Me 👩‍💻 </h3>
       <div className="flex flex-row gap-20">
-        <div className="w-[70vw]">
+        <div className="w-[40vw] flex items-center justify-center">
+          <img
+            src={"/profile.png"}
+            alt="profile"
+            className="w-[340px] h-[340px] rounded-full border-2 border-green object-cover object-center"
+          />
+        </div>
+        <div className="w-[60vw]">
           <p>
             I'm a Full Stack Developer with over 9 years of experience building
             scalable web applications and AI-driven solutions. I specialize in
@@ -14,7 +21,7 @@ export const About = () => {
               {" "}
               reduce development time by up to 50%.
             </b>{" "}
-            I’ve developed applications powered by AI and conducted{" "}
+            I've developed applications powered by AI and conducted{" "}
             <b className="text-lightest-slate">
               prompt engineering training for over 50 employees at PwC
             </b>
@@ -41,7 +48,6 @@ export const About = () => {
             engineering and strong team dynamics.
           </p>
         </div>
-        <div className="border border-white w-[30vw] "></div>
       </div>
     </section>
   );

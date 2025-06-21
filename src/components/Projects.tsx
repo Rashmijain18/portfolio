@@ -17,7 +17,6 @@ export const Projects = () => {
         "Cursor",
       ],
       githubLink: "https://github.com/jermbo/ChoreChart",
-      liveDemoLink: "https://your-live-demo-url.com",
       image: "/ChoreChart.png",
     },
     {

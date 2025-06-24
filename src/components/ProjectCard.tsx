@@ -6,7 +6,7 @@ interface Project {
   description?: string;
   technologies?: string[];
   githubLink?: string;
-  liveDemoLink: string;
+  liveDemoLink?: string;
   image: string;
 }
 

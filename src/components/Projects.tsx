@@ -17,7 +17,7 @@ export const Projects = () => {
         "Cursor",
       ],
       githubLink: "https://github.com/jermbo/ChoreChart",
-      image: "/ChoreChart.png",
+      video: "/chorechart.mov",
     },
     {
       title: "Sudoku",
@@ -27,6 +27,7 @@ export const Projects = () => {
       githubLink: "https://github.com/Rashmijain18/Sudoku/tree/master",
       liveDemoLink: "https://sudoku-five-neon.vercel.app/",
       image: "/Sudoku.png",
+      video: "",
     },
     {
       title: "Article on Hoisting",

@@ -7,7 +7,8 @@ interface Project {
   technologies?: string[];
   githubLink?: string;
   liveDemoLink?: string;
-  image: string;
+  image?: string;
+  video?: string;
 }
 
 interface ProjectCardProps {
@@ -15,8 +16,15 @@ interface ProjectCardProps {
 }
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
-  const { title, description, technologies, githubLink, liveDemoLink, image } =
-    project;
+  const {
+    title,
+    description,
+    technologies,
+    githubLink,
+    liveDemoLink,
+    image,
+    video,
+  } = project;
 
   return (
     <div className="rounded-lg shadow-md flex flex-col h-full overflow-hidden">
@@ -47,6 +55,13 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           </div>
         </div>
 
+        {video && (
+          <video
+            src={video}
+            controls
+            className="w-full h-48 object-cover rounded-lg !my-0"
+          />
+        )}
         {image && (
           <img
             src={image}

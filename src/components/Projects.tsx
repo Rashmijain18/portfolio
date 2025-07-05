@@ -17,7 +17,7 @@ export const Projects = () => {
         "Cursor",
       ],
       githubLink: "https://github.com/jermbo/ChoreChart",
-      video: "/chorechart.mov",
+      video: "/ChoreChart.mp4",
     },
     {
       title: "Sudoku",

@@ -97,6 +97,8 @@ To customize the portfolio:
 4. Update skills in Skills component
 5. Modify contact information in ContactInformation component
 
+## [Watch Demo Video](/public/ChoreChart.mp4)
+
 ## 📄 License
 
 This project is open source and available under the MIT License.
